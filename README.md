@@ -9,10 +9,11 @@ particulars of modules and modulefiles can be found
 Use:
 ----
 Currently, this repository contains modulefiles for
-two of my github repositories:
+three of my github repositories:
 
-* [random_data](https://github.com/emd/random_data), and
-* [mitpci](https://github.com/emd/mitpci).
+* [random_data](https://github.com/emd/random_data),
+* [mitpci](https://github.com/emd/mitpci), and
+* [magnetics](https://github.com/emd/magnetics).
 
 The modulefiles are named after their corresponding packages, and
 they should require *minimal* modification for your own use on Iris.
