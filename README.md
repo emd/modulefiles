@@ -15,6 +15,9 @@ three of my github repositories:
 * [mitpci](https://github.com/emd/mitpci), and
 * [magnetics](https://github.com/emd/magnetics).
 
+(In addition, there is also a modulefile for a
+[color-blind proof set of distinct colors](https://personal.sron.nl/~pault/)).
+
 The modulefiles are named after their corresponding packages, and
 they should require *minimal* modification for your own use on Iris.
 At the top of each module file, there is a TCL variable named
