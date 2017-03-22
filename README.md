@@ -21,7 +21,7 @@ At the top of each module file, there is a TCL variable named
     <package>_root
 
 You will need to change this to the top-level directory of
-<package> on your account (the top-level directory is the
+`<package>` on your account (the top-level directory is the
 directory created when pulling from the github repo).
 That's it! You shouldn't need to change anything else in
 the modulefile. The `random_data` and `mitpci` modules can
