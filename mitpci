@@ -1,0 +1,50 @@
+#%Module 1.0
+#
+# Modulefile for mitpci
+#
+
+# ===============================================================
+# Change ONLY this:
+# -----------------
+# Set TCL variable for root `mitpci` directory;
+# change this to the top-level directory of `mitpci` package
+# (i.e. the directory created when pulling from the github repo).
+set mitpci_root $env(HOME)/python/projects/mitpci
+# ===============================================================
+
+proc ModulesHelp {} {
+   puts stderr "Modulefile for the `mitpci` Python package."
+   puts stderr ""
+   puts stderr "The following modules are loaded, if not already present:"
+   puts stderr "    python"
+   puts stderr "    mdsplus"
+   puts stderr ""
+   puts stderr "The following environment variables are defined:"
+   puts stderr "    \$MITPCIROOT - path to the `mitpci` package"
+   puts stderr "    \$pci_path   - PCI MDSplus tree-path definition"
+   puts stderr ""
+   puts stderr "The relevant `mitpci` paths are added to the following:"
+   puts stderr "    \$PYTHONPATH"
+   puts stderr ""
+   puts stderr "The following aliases are defined:"
+   puts stderr "    test_mitpci - automated testing of `mitpci` package"
+   puts stderr ""
+}
+
+conflict mitpci
+
+# Load python and MDSplus modules, if not already present
+if { ! [ is-loaded python ] } { module load python }
+if { ! [ is-loaded mdsplus ] } { module load mdsplus }
+
+# Set the `mitpci` environmental variables
+setenv MITPCIROOT $mitpci_root
+setenv pci_path hermit.gat.com::/trees/pci
+
+# Always prepend paths, so that the last module loaded
+# will have it's path searched first.
+prepend-path PYTHONPATH $mitpci_root
+
+# Define alias for automated testing of `mitpci`
+set python_dir [file dirname $env(PYTHON)]
+set-alias test_mitpci "$python_dir/nosetests $mitpci_root/tests/."
