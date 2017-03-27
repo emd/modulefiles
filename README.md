@@ -28,7 +28,17 @@ At the top of each module file, there is a TCL variable named
 You will need to change this to the top-level directory of
 `<package>` on your account (the top-level directory is the
 directory created when pulling from the github repo).
-That's it! You shouldn't need to change anything else in
-the modulefile. The `random_data` and `mitpci` modules can
-then be loaded, unloaded, etc., as is discussed in the
-above-linked Iris documentation.
+The `mitpci` package is special in that it depends on
+`random_data`, `bci`, `magnetics`, and `distinct_colours`;
+as a result, there is an additional TCL variable named
+
+    modulefiles_dir
+
+You should change this to the directory containing
+the modulefiles for `random_data`, `bci`, `magnetics`, and
+`distinct_colours`.
+
+That's it!
+You shouldn't need to change anything else in the modulefile.
+The modules can then be loaded, unloaded, etc.,
+as is discussed in the above-linked Iris documentation.
