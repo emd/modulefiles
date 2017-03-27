@@ -33,7 +33,8 @@ proc ModulesHelp {} {
 
 conflict magnetics
 
-# Load python module, if not already present
+# Load needed modules, if not already present
+if { ! [ is-loaded defaults ] } { module load defaults }
 if { ! [ is-loaded python ] } { module load python }
 
 # `magnetics` package depends on Tom Osborne's
