@@ -17,7 +17,9 @@ four of my github repositories:
 * [magnetics](https://github.com/emd/magnetics).
 
 (In addition, there is also a modulefile for a
-[color-blind proof set of distinct colors](https://personal.sron.nl/~pault/)).
+[color-blind proof set of distinct colors](https://personal.sron.nl/~pault/)
+and [repository for fitting a set of points to an
+ellipse](https://github.com/ndvanforeest/fit_ellipse)).
 
 The modulefiles are named after their corresponding packages, and
 they should require *minimal* modification for your own use on Iris.
@@ -29,13 +31,13 @@ You will need to change this to the top-level directory of
 `<package>` on your account (the top-level directory is the
 directory created when pulling from the github repo).
 The `mitpci` package is unique in that it depends on
-`random_data`, `bci`, and `magnetics`;
+`random_data`, `fit_ellipse`, `bci`, and `magnetics`;
 as a result, there is an additional TCL variable named
 
     modulefiles_dir
 
 You should change this to the directory containing
-the modulefiles for `random_data`, `bci`, and `magnetics`.
+the modulefiles for `random_data`, `fit_ellipse`, `bci`, and `magnetics`.
 
 That's it!
 You shouldn't need to change anything else in the modulefile.
