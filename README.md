@@ -19,6 +19,8 @@ four of my github repositories:
 In addition to my own github repositories,
 there are also modulefiles for the following:
 
+* [a class for general data retrieval at DIII-D](
+   https://diii-d.gat.com/diii-d/Gadata_py),
 * [a color-blind proof set of distinct colors](
    https://personal.sron.nl/~pault/), and
 * [least-squares fitting a set of points to an ellipse](
