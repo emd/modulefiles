@@ -40,16 +40,16 @@ The `mitpci` and `bci` packages also depend on
 several other packages whose modulefiles
 are curated by this repository.
 (In particular, the `mitpci` package depends on:
-{
+[
 `random_data`,
 `filters`,
 `bci`,
 `magnetics`,
 `fit_ellipse`
-}, and the `bci` package depends on:
-{
+], and the `bci` package depends on:
+[
 `filters`
-}).
+]).
 As a result, there is an additional TCL variable named
 
     modulefiles_dir
