@@ -11,9 +11,17 @@
 # (i.e. the directory created when pulling from the github repo).
 set mitpci_root $env(HOME)/python/projects/mitpci
 
-# The `mitpci` package additionally relies on the `random_data`,
-# `bci`, and `magnetics` modules. The modulefiles for all of these
-# modules should be located in a directory `modulefiles_dir`.
+# The `mitpci` package additionally relies on the following
+# modules:
+#
+#   `random_data`
+#   `filters`
+#   `bci`
+#   `magnetics`
+#   `fit_ellipse`
+#
+# The modulefiles for these modules should be located
+# in a directory `modulefiles_dir`.
 set modulefiles_dir $env(HOME)/modulefiles
 # ===============================================================
 
@@ -25,9 +33,9 @@ proc ModulesHelp {} {
    puts stderr "    mdsplus"
    puts stderr "    random_data"
    puts stderr "    filters"
-   puts stderr "    fit_ellipse"
    puts stderr "    bci"
    puts stderr "    magnetics"
+   puts stderr "    fit_ellipse"
    puts stderr ""
    puts stderr "The following environment variables are defined:"
    puts stderr "    \$MITPCIROOT - path to the `mitpci` package"
@@ -48,9 +56,9 @@ if { ! [ is-loaded python ] } { module load python }
 if { ! [ is-loaded mdsplus ] } { module load mdsplus }
 if { ! [ is-loaded $modulefiles_dir/random_data ] } { module load $modulefiles_dir/random_data }
 if { ! [ is-loaded $modulefiles_dir/filters ] } { module load $modulefiles_dir/filters }
-if { ! [ is-loaded $modulefiles_dir/fit_ellipse ] } { module load $modulefiles_dir/fit_ellipse }
 if { ! [ is-loaded $modulefiles_dir/bci ] } { module load $modulefiles_dir/bci }
 if { ! [ is-loaded $modulefiles_dir/magnetics ] } { module load $modulefiles_dir/magnetics }
+if { ! [ is-loaded $modulefiles_dir/fit_ellipse ] } { module load $modulefiles_dir/fit_ellipse }
 
 # Set the `mitpci` environmental variables
 setenv MITPCIROOT $mitpci_root

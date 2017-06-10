@@ -36,14 +36,27 @@ At the top of each module file, there is a TCL variable named
 You will need to change this to the top-level directory of
 `<package>` on your account (the top-level directory is the
 directory created when pulling from the github repo).
-The `mitpci` package is unique in that it depends on
-`random_data`, `fit_ellipse`, `bci`, and `magnetics`;
-as a result, there is an additional TCL variable named
+The `mitpci` and `bci` packages also depend on
+several other packages whose modulefiles
+are curated by this repository.
+(In particular, the `mitpci` package depends on:
+{
+`random_data`,
+`filters`,
+`bci`,
+`magnetics`,
+`fit_ellipse`
+}, and the `bci` package depends on:
+{
+`filters`
+}).
+As a result, there is an additional TCL variable named
 
     modulefiles_dir
 
+in both the `mitpci` and the `bci` modulefiles.
 You should change this to the directory containing
-the modulefiles for `random_data`, `fit_ellipse`, `bci`, and `magnetics`.
+the modulefiles for the `mitpci` and/or `bci` dependencies.
 
 That's it!
 You shouldn't need to change anything else in the modulefile.

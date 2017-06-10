@@ -10,6 +10,14 @@
 # change this to the top-level directory of `bci` package
 # (i.e. the directory created when pulling from the github repo).
 set bci_root $env(HOME)/python/projects/bci
+
+# The `bci` package additionally relies on the following modules:
+#
+#     `filters`
+#
+# The modulefiles for these modules should be located
+# in a directory `modulefiles_dir`.
+set modulefiles_dir $env(HOME)/modulefiles
 # ===============================================================
 
 proc ModulesHelp {} {
@@ -18,6 +26,7 @@ proc ModulesHelp {} {
    puts stderr "The following modules are loaded, if not already present:"
    puts stderr "    python"
    puts stderr "    mdsplus"
+   puts stderr "    filters"
    puts stderr ""
    puts stderr "The following environment variables are defined:"
    puts stderr "    \$BCIROOT - path to the `bci` package"
@@ -36,6 +45,7 @@ conflict bci
 # Load python and MDSplus modules, if not already present
 if { ! [ is-loaded python ] } { module load python }
 if { ! [ is-loaded mdsplus ] } { module load mdsplus }
+if { ! [ is-loaded $modulefiles_dir/filters ] } { module load $modulefiles_dir/filters }
 
 # Set the `bci` environmental variables
 setenv BCIROOT $bci_root
