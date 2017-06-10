@@ -10,7 +10,7 @@
 # change this to the top-level directory of `fit_ellipse` package
 # (i.e. the directory created when pulling from the github repo,
 # which is listed in the `ModulesHelp` section below).
-set fit_ellipse_root $env(HOME)/python/fit_ellipse
+set fit_ellipse_root $env(HOME)/python/projects/fit_ellipse
 # ===============================================================
 
 proc ModulesHelp {} {

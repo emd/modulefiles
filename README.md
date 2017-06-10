@@ -9,9 +9,10 @@ particulars of modules and modulefiles can be found
 Use:
 ----
 Currently, this repository contains modulefiles for
-four of my github repositories:
+five of my github repositories:
 
 * [random_data](https://github.com/emd/random_data),
+* [filters](https://github.com/emd/filters),
 * [mitpci](https://github.com/emd/mitpci),
 * [bci](https://github.com/emd/bci), and
 * [magnetics](https://github.com/emd/magnetics).

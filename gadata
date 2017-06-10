@@ -13,7 +13,7 @@
 #       https://diii-d.gat.com/diii-d/Gadata_py
 #
 # is copied to).
-set gadata_root $env(HOME)/python/gadata
+set gadata_root $env(HOME)/python/projects/gadata
 # ===============================================================
 
 proc ModulesHelp {} {
