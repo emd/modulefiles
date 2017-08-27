@@ -62,7 +62,7 @@ if { ! [ is-loaded $modulefiles_dir/fit_ellipse ] } { module load $modulefiles_d
 
 # Set the `mitpci` environmental variables
 setenv MITPCIROOT $mitpci_root
-setenv pci_path hermit.gat.com::/trees/pci
+setenv pci_path atlas.gat.com::/data/usershots/~t\;atlas.gat.com::/data/models/~t\;hermit.gat.com::/trees/pci
 
 # Always prepend paths, so that the last module loaded
 # will have it's path searched first.
